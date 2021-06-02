@@ -19,7 +19,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../libraries/p5.min.js"></script>
     <script src="../libraries/p5.dom.min.js"></script>
-    <!-- <script src="../js/script_laboral.js"></script> -->
+    <script src="../js/script_misFacturas.js"></script>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>MIS FACTURAS</title>
 </head>
@@ -103,7 +103,7 @@
                                 <a class="nav-link" href="subir_facturas.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-file-upload"></i>SUBIR FACTURAS</a>
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="mi_perfil.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-id-card"></i>MI PERFIL</a>
+                                <a class="nav-link" href="mi_perfil.html"  aria-controls="submenu-1"><i class="fa fa-fw fa-id-card"></i>MI PERFIL</a>
                             </li>
                         </ul>
                     </div>
@@ -205,6 +205,7 @@
                                             <table class="table no-wrap p-table table-bordered table-striped mb-0" >
                                                 <thead class="bg-light ">
                                                     <tr class="border-0 ">
+                                                        <th class="border-0">ID FACTURA</th>
                                                         <th class="border-0">NOMBRE DE LA FACTURA</th>
                                                         <th class="border-0">TIPO DE FACTURA</th>
                                                         <th class="border-0">MONTO</th>
@@ -215,6 +216,7 @@
                                                 </thead>
                                                 <tbody id="t_facturas">
                                                     <tr>
+                                                        <td>01</td>
                                                         <td>Nombre de factura 1</td>
                                                         <td>SERVICIOS</td>
                                                         <td>$1000.00</td>
@@ -223,6 +225,7 @@
                                                         <td>COMPLEMENTO</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>02</td>
                                                         <td>Nombre de factura 2</td>
                                                         <td>COMPONENTES</td>
                                                         <td>$3050.00</td>
@@ -231,6 +234,7 @@
                                                         <td>COMPLEMENTO</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>03</td>
                                                         <td>Nombre de factura 3</td>
                                                         <td>SERVICIOS</td>
                                                         <td>$1000.00</td>
@@ -239,6 +243,7 @@
                                                         <td>COMPLEMENTO</td>
                                                     </tr>
                                                     <tr>
+                                                        <td>04</td>
                                                         <td>Nombre de factura 4</td>
                                                         <td>COMPONENTES</td>
                                                         <td>$10550.00</td>
@@ -253,7 +258,75 @@
                                 </div>
                             </div>
                         </div>
-                        
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="page-header">
+                                    <h3>SUBIDA DE COMPLEMENTO</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5 class="text-muted "id="id_factura"> ID </h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div style="margin-left: 10px;" class="card border-3 border-top border-top-primary ">
+                                                <div class="card-body ">
+                                                    <h5 class="text-muted ">SUBIR PDF</h5>
+                                                    <!-- <div class="metric-value d-inline-block ">
+                                                        <h1 class="mb-1 " id="monto_reclamado"> - </h1>
+                                                    </div> -->
+                                                    <div class="form-group">
+                                                        <form action="" method="post" id="postPDF">
+                                                            <input type="file" class="form-control" id="uploadPDF" accept="application/pdf">
+                                                            
+                                                        </form>
+                                                    </div>
+                                                    
+                                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold ">
+                                                        <span class="icon-circle-medium text-muted "><i class="fa fa-fw fa-file-pdf"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div style="margin-right: 10px;" class="card border-3 border-top border-top-primary ">
+                                                <div class="card-body ">
+                                                    <h5 class="text-muted ">SUBIR XML</h5>
+                                                    <!-- <div class="metric-value d-inline-block ">
+                                                        <h1 class="mb-1 " id="total_juicios"> - </h1>
+                                                    </div> -->
+                                                    <div class="form-group">
+                                                        <form method="post" id="postXML" target="_blank">
+                                                            <input type="file" class="form-control" id="uploadXML" accept="text/xml">
+                                                            <input type="hidden" name="fileContentPDF" id="fileContentPDF">
+                                                            <input type="hidden" name="fileContentXML" id="fileContentXML">
+                                                            <input type="hidden" name="fileXMLName" id="fileXMLName">
+                                                            <input type="hidden" name="rfcEmisor" id="rfcEmisor">
+                                                            <input type="hidden" name="selloFiscal" id="selloFiscal">
+                                                            <input type="hidden" name="totalFactura" id="totalFactura">
+                                                            <input type="hidden" name="subTotalFactura" id="subTotalFactura">
+                                                            <input type="hidden" name="fechaCaptura" id="fechaCaptura">
+                                                            <input type="hidden" name="moneda" id="moneda">
+                                                            <input type="hidden" name="ivaPorcentaje" id="ivaPorcentaje">
+                                                            <input type="hidden" name="valorIvaPorcentaje" id="valorIvaPorcentaje">
+                                                            <input type="hidden" name="id" id="id">
+                                                            <input type="hidden" name="tipo" id="tipo">
+                                                            <input type="hidden" name="tipoCambio" id="tipoCambio">
+                                                        </form>
+                                        
+                                                    </div>
+                                                    <div class="metric-label d-inline-block float-right text-success font-weight-bold ">
+                                                        <span class="icon-circle-medium text-muted "><i class="fa fa-fw fa-file-code"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                        </div>
                     </div>
                 </div>
             </div>
