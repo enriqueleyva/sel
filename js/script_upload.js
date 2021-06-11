@@ -159,7 +159,7 @@ function validateFiles() {
 
                         if (nombrePDF === nombreXML) {
                             sleep(3000).then(() => {
-                                document.getElementById('postXML').action = 'https://script.google.com/macros/s/AKfycbwTEa4nyMDVAb6ouWLCFLbs9-jLIHutGqqjNVT8LHtK2gzaBx4JOpSXY1_rewTJcdGbog/exec';
+                                document.getElementById('postXML').action = 'https://script.google.com/macros/s/AKfycbz3OseL35TM0Qge_IDC2AuCF2e7tlxYb-DuhBqedpPGO73sukiHu95AGD9mid6Kc-gHCQ/exec';
                                 document.getElementById('postXML').submit();
                                 swal('Se abrirá una pestaña en el navegador, por favor no la cierres hasta que el sistema te indique','','success')
                                 .then((value) => {
