@@ -1,6 +1,6 @@
 
 var user, pw;
-var script_url = 'https://script.google.com/macros/s/AKfycby0i077iv5W8e4-l-f4EmnWgN8G3zN18Mqdm51MKW-Qe1cULQCz8skCnsEeFEnJlvt47g/exec'
+var script_url = 'https://script.google.com/macros/s/AKfycbz3OseL35TM0Qge_IDC2AuCF2e7tlxYb-DuhBqedpPGO73sukiHu95AGD9mid6Kc-gHCQ/exec'
 
 function setup() {
     user    = select('#user')
