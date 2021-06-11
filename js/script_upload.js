@@ -13,9 +13,6 @@ function setup() {
     btn_subir = select('#btnSubirPDF')
     btn_subir.mouseClicked(validateFiles)
 
-    btnAyuda = select('#btnAyuda');
-    btnAyuda.mouseClicked(mensajeAlerta);
-
     invoiceSelector = select('#selectInvoice');
     arrayInvoice.forEach(element => {
         invoiceSelector.option(element)
