@@ -6,7 +6,7 @@ const names = ['Razon de servicios', 'Registro de Prestadoras de Servicios Espec
                 'Pago de Cuotas al Instituto del Fondo Nacional de la Vivienda para los Trabajadores (INFONAVIT)', 'Acuse de recibo y Declaración Mensual del Impuesto al Valor Agregado',
                 '']
 function setup() {
-    cargarInicio();
+//     cargarInicio();
     setName()
 }
 
