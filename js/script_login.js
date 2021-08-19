@@ -42,7 +42,7 @@ function login() {
             headers: myHeaders,
             body: raw,
             redirect: 'follow',
-            mode: 'cors'
+            mode: 'no-cors'
         };
 
         fetch("https://script.google.com/macros/s/AKfycbxoa-lGi2H-8r_vo7YCs_9gkU1plr2ITj-ZBbZG/exec", requestOptions)
